@@ -23,6 +23,7 @@ textarea {
 /*footer*/
 footer{
 	color:white;
+  margin-top: 20px;
 }
 
 /* forms */
@@ -37,19 +38,93 @@ input {
   height: auto !important;
 }
 
-.row{
-	margin-left:20%;
+.form{
+	margin-left:40%;
+  width:300px;
+  border:1px solid;
+  margin-top: 10px;
+  background: linear-gradient(to top left, #778899, #B0C4DE);
 }
+.form label{
+  margin-top: 15px;
+  color:white;
+  text-shadow: black 1px 1px 0, black 1px 1px 0;
+}
+.form input[type="text"],[type="password"]{
+  width:200px;
+}
+.form input[type="submit"]{
+margin-right: 140px;
 
+
+}
 #error_explanation {
   color: #f00;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
   }
-}
 
+}
+#erors{
+  border: 1px solid #F08080;
+
+}
+#er{
+  width:300px;
+  border: 1px solid #F08080;
+  margin-left:39%;
+}
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+.s{
+  background: linear-gradient(to top left, #4169E0, #6495ED);
+  height: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  color: white;
+  font-size: 16pt;
+  text-shadow: black 1px 1px 0, black 1px 1px 0;
+  padding-top:10px;
+}
+.form p{
+  color:white;
+  margin-left: 115px;
+  transform: translate(0,-45px);
+}
+
+.form a{
+  color: #0000CD;
+}
+
+#s-out{
+  position: absolute;
+  top:0px;
+  right:0px;
+}
+/*buttons/icons add/edit/delete List*/
+#add-list{
+  margin-top:20px;
+  width:180px;
+  font-size: 16px;
+  height: 40px;
+  text-align: right;
+  color:white;
+  border: 1px solid  grey;
+  border-radius: 4px;
+  background: linear-gradient(to top left, #4169E0, #6495ED);
+}
+#add-list b{
+  margin-right: 7px;
+}
+
+#pluss{
+  margin-left: -37px;
+  margin-top:-3px;
+  position: absolute;
+  color: #2F4F4F;
+  text-shadow:  #B0C4DE 1px 1px 0,  #B0C4DE 1px 1px 0;
+
 }

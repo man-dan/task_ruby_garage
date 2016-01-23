@@ -6,13 +6,16 @@
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <%= render 'layouts/shim' %>
   </head>
   <body>
 
-<h2>SIMPLE TODO LISTS</h2>
-FROM RUBY GARAGE
 
+  <%= render 'layouts/header' %>
+  <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>" id="er"><%= value %></div>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>

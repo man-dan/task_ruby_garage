@@ -1,7 +1,5 @@
-<h1>Sign up</h1>
-
-<div class="row">
-  <div class="span6 offset3">
+<div class="form">
+   <div class="s">Sign up</div>
     <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
 	 <%= f.label :email %>
@@ -9,8 +7,9 @@
 
       <%= f.label :password %>
       <%= f.password_field :password %>
-
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      <p></p>
+      <%= f.submit "Sign up", class: "btn btn-success" %>
     <% end %>
-  </div>
+    <p>Have an account? <%= link_to "Sign in", signin_path %></p>
+
 </div>
