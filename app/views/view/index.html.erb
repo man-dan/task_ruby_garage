@@ -1,4 +1,8 @@
-<%= button_to "view/create",id:"add-list" do %>
+<% @projects.each do |f| %>
+		<%= render 'view/project', value: f%>
+	<% end %>
+
+<%= button_to "view/create", id:"add-list" do %>
 
  	 <i class="fa fa-plus fa-2x" id="pluss"></i><b>Add TODO List</b>
 <% end %>

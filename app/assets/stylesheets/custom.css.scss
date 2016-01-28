@@ -128,3 +128,71 @@ margin-right: 140px;
   text-shadow:  #B0C4DE 1px 1px 0,  #B0C4DE 1px 1px 0;
 
 }
+
+/*projects*/
+
+.proj{
+  margin-top:10px;
+  width:550px;
+  font-size: 16px;
+  height: 45px;
+  text-align: left;
+  color:white;
+  border: 1px solid  grey;
+  border-radius: 4px;
+  background: linear-gradient(to top left, #4169E0, #6495ED);
+  margin-left:34%;
+
+}
+.proj p{
+  margin-top:-19px;
+  margin-left: 35px;
+  
+
+}
+
+#calendar{
+  margin-left: 10px;
+  margin-top:11px;
+  color: black;
+  text-shadow:  #B0C4DE 1px 1px 0,  #B0C4DE 1px 1px 0;
+}
+.mod{
+  display: none;
+}
+.proj:hover .mod{
+  display:block;
+}
+#trashs{
+  margin-left:511px;
+  color: white;
+  margin-top: -20px;
+  
+}
+#trashs i{
+  color:white;
+  
+}
+#trashs i:hover{
+  color:red;
+}
+#v-line{
+  color: #2F4F4F;
+  text-shadow:  #B0C4DE 1px 1px 0,  #B0C4DE 1px 1px 0;
+  margin-top: -30px;
+  margin-left: 90.5%;
+}
+.fa-pencil{
+ 
+  color:white;
+  margin-top:14px;
+}
+
+.fa-pencil:hover{
+  color:#32CD32;
+}
+.ed{
+  width:20px;
+  margin-top:-31px;
+  margin-left: 475px;
+}

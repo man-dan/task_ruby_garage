@@ -1,0 +1,12 @@
+
+<div class="proj"><i class="fa fa-calendar" id="calendar"></i><p><%= value.title %></p>
+ <div class="mod"><div id="v-line">|</div>
+ 	<div class="ed"><%=link_to "view/edit/#{value.id}" do%><i class="fa fa-pencil"></i><%end%></div>
+       
+        <div id="trashs"><%=link_to "view/destroy/#{value.id}",  method: :delete do%>
+        <i class="fa fa-trash-o"></i>
+        <%end%></div>
+    </div>
+</div>
+<br><br>
+

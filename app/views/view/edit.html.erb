@@ -1,0 +1,5 @@
+<%=form_tag("view/destroy/#{value.id}",  method: :patch) do%>
+      <%=text_field_tag "title", value.title %>
+      <%= button_tag "", class: "fa fa-check fix-icon-right clr-green btn-rename" %>
+
+    <% end %>
