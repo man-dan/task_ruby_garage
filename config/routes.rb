@@ -8,7 +8,7 @@ TaskRubyGarage::Application.routes.draw do
    match '/signout', to: 'sessions#destroy',     via: 'delete'
    match 'view/create',          to: 'view#create',        via: 'post'
    match 'view/destroy/:id',     to: 'view#destroy',       via: 'delete'
-   match 'view/edit/:id',        to: 'view#edit',          via: 'get'
+   match 'view/edit/:id',             to: 'view#edit',          via: 'get'
    match 'view/update/:id',      to: 'view#update',        via: 'patch'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,5 +1,8 @@
-<%=form_tag("view/destroy/#{value.id}",  method: :patch) do%>
-      <%=text_field_tag "title", value.title %>
-      <%= button_tag "", class: "fa fa-check fix-icon-right clr-green btn-rename" %>
+<% value=@project %>
 
-    <% end %>
+<%= form_tag("/view/update/#{value.id}", method: :patch) do %>
+ <label><%= "Rename project "+value.title%></label>
+	<%= text_field_tag "title", value.title, id:"re-title" %>
+	<%= button_tag "", class: "fa fa-check" %>
+<%end%>
+
