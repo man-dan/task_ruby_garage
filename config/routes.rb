@@ -2,14 +2,20 @@ TaskRubyGarage::Application.routes.draw do
    resources :users
    resources :sessions, only: [:new, :create, :destroy]
    resources :view, only:[:index, :create, :destroy, :edit, :update]
+   resources :tasks, only: [:create, :destroy, :edit, :update]
    root 'view#index' 
-   match '/signup',  to: 'users#new',            via: 'get'
-   match '/signin',  to: 'sessions#new',         via: 'get'
-   match '/signout', to: 'sessions#destroy',     via: 'delete'
-   match 'view/create',          to: 'view#create',        via: 'post'
-   match 'view/destroy/:id',     to: 'view#destroy',       via: 'delete'
-   match 'view/edit/:id',             to: 'view#edit',          via: 'get'
-   match 'view/update/:id',      to: 'view#update',        via: 'patch'
+   match '/signup',            to: 'users#new',          via: 'get'
+   match '/signin',            to: 'sessions#new',       via: 'get'
+   match '/signout',           to: 'sessions#destroy',   via: 'delete'
+   match 'view/create',        to: 'view#create',        via: 'post'
+   match 'view/destroy/:id',   to: 'view#destroy',       via: 'delete'
+   match 'view/edit/:id',      to: 'view#edit',          via: 'get'
+   match 'view/update/:id',    to: 'view#update',        via: 'patch'
+   match 'tasks/update/:id',   to: 'tasks#update',       via: 'patch'
+   match 'tasks/edit/:id',     to: 'tasks#edit',         via: 'get'
+   match 'tasks/check/:id',    to: 'tasks#check',        via: 'get'
+   match 'tasks/uncheck/:id',  to: 'tasks#uncheck',      via: 'get'
+   match 'tasks/destroy/:id',  to: 'tasks#destroy',      via: 'delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

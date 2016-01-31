@@ -4,11 +4,15 @@ class ViewController < ApplicationController
 
  def index
  	 @projects=current_user.projects.all
+   @tasks=current_user.tasks.all
+   @task=current_user.tasks.new
  end
  
  def create
  	if current_user.projects.create!(title: "New list")
       @project=current_user.projects.first
+      @tasks=current_user.tasks.all
+      @task=current_user.tasks.new
   	end
 	
 	if @project.save

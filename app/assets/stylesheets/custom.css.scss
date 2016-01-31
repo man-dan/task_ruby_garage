@@ -5,7 +5,9 @@
 html {
   overflow-y: scroll;
 }
-
+header{
+  margin-left:50px;
+}
 body {
   padding-top: 60px;
   text-align: center;
@@ -24,6 +26,7 @@ textarea {
 footer{
 	color:white;
   margin-top: 20px;
+  margin-left:50px;
 }
 
 /* forms */
@@ -115,6 +118,7 @@ margin-right: 140px;
   border: 1px solid  grey;
   border-radius: 4px;
   background: linear-gradient(to top left, #4169E0, #6495ED);
+  margin-left: 60px;
 }
 #add-list b{
   margin-right: 7px;
@@ -133,26 +137,25 @@ margin-right: 140px;
 
 .proj{
   margin-top:10px;
-  width:550px;
+  width:600px;
   font-size: 16px;
   height: 45px;
   text-align: left;
   color:white;
   border: 1px solid  grey;
-  border-radius: 4px;
   background: linear-gradient(to top left, #4169E0, #6495ED);
   margin-left:34%;
 
 }
 .proj p{
   margin-top:-19px;
-  margin-left: 35px;
+  margin-left: 50px;
   
 
 }
 
 #calendar{
-  margin-left: 10px;
+  margin-left: 18px;
   margin-top:11px;
   color: black;
   text-shadow:  #B0C4DE 1px 1px 0,  #B0C4DE 1px 1px 0;
@@ -164,7 +167,7 @@ margin-right: 140px;
   display:block;
 }
 #trashs{
-  margin-left:511px;
+  margin-left:560px;
   color: white;
   margin-top: -20px;
   
@@ -182,13 +185,13 @@ margin-right: 140px;
   margin-top: -30px;
   margin-left: 90.5%;
 }
-.fa-pencil{
- 
+.p_pencil{
+  margin-left:45px;
   color:white;
   margin-top:14px;
 }
 
-.fa-pencil:hover{
+.p_pencil:hover{
   color:#32CD32;
 }
 .ed{
@@ -205,8 +208,109 @@ margin-right: 140px;
   margin-top:-7px;
   background-color: white;
 }
+/*tasks */
+#task_name{
+  width:490px;
+  margin-top:-8.5%;
+}
 
-#edit{
-  margin-top: -80px;
-  margin-right: 20px;
+#add_task{
+  margin-left:75%;
+  margin-top:-9%;
+ 
+ 
+  
+}
+#task_place{
+  background: linear-gradient(to top left, #C0C0C0, #D3D3D3);
+  height: 50px;
+  border: 1px solid  grey;
+  width:599px;
+  margin-left:34%;
+
+}
+#plus_l{
+  
+  height:30px;
+  width:30px;
+  margin-right:92%;
+  margin-top:2%;
+  color: #2E8B57;
+  text-shadow:  black  0px 0px 0px,  black 0px -2px 0px;
+
+}
+
+#task{
+  width:598px;
+  border-top: 1px solid  #D3D3D3;
+  height: 50px;
+}
+#tasks_place{
+  
+  width:598px;
+  margin-left:34.11%;
+  border: 1px solid grey;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
+}
+
+#t_name{
+  margin-top:-6%;
+  text-align:left;
+  margin-left:12%;
+}
+#task_line{
+  background-color: #F4A460;
+  height:50px;
+  width:1px;
+  margin-left:50px;
+  margin-top: -5.26%;
+}
+#tasks_line{
+  background-color: #F4A460;
+  height:50px;
+  width:1px;
+  margin-left:43px;
+  margin-top: -8.3%;
+
+}
+#gr_line{
+  background-color: #D3D3D3;
+  height:49px;
+  width:1px;
+  margin-left:80%;
+  margin-top:-7.2%;
+}
+#check{
+text-align: justify;
+margin-left:15px;
+margin-top:15px;
+height:15px;
+width:15px;
+}
+#task:hover{
+  background-color: #FAEBD7;
+  height:50px;
+  border-radius: 0 0 15px 15px;
+}
+#p-line{
+  width:10px;
+  margin-top:-20px;
+  margin-left:90%;
+}
+#trash_t{
+  width:10px;
+  margin-top:-20px;
+  margin-left:93%;
+  color:grey;
+}
+#pencil_t{
+  margin-left: 75%;
+  margin-top: -6%;
+}
+.mod_t{
+  display:none;
+}
+#task:hover .mod_t{
+  display:block;
 }

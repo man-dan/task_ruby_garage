@@ -1,0 +1,7 @@
+<% value=@task %>
+<%= form_tag("/tasks/update/#{value.id}", method: :patch) do %>
+ <label><%= "Rename task "+value.name%></label>
+	<%= text_field_tag "name", value.name, id:"re-title" %>
+	<%= button_tag "", class: "fa fa-check" %>
+<%end%>
+
