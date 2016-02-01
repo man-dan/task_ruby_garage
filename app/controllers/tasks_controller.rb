@@ -20,13 +20,23 @@ class TasksController < ApplicationController
     else
       render 'edit'
     end
- 
   end
-
   def destroy
     if current_user.tasks.find(params[:id]).destroy
       redirect_to root_url
     end
+  end
+
+  def check
+    @task=current_user.tasks.find(params[:id])
+    @task.update_attributes(:status => true)
+    redirect_to root_url
+  end
+
+  def uncheck
+    @task=current_user.tasks.find(params[:id])
+    @task.update_attributes(:status => false)
+    redirect_to root_url
   end
 
 	private

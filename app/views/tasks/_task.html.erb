@@ -1,6 +1,10 @@
-<div id="task"> <div id="check"><%=link_to "#" do %>
-  <i class="fa fa-lg fa fa-square-o check-icon"></i>
-<%end%></div>
+<div id="task"><div id="check">
+<% if task.status != false %>
+    <%= render('tasks/check', task: task) %>
+<% else %>
+    <%= render('tasks/uncheck', task: task) %>
+<% end %>
+</div>
 <div id="task_line"></div><div id="tasks_line"></div><p id="t_name"><%= task.name%></p><div id="gr_line">
 </div> 
 <div class="mod_t"><div id="pencil_t"><%=link_to "tasks/edit/#{task.id}" do%>
