@@ -1,12 +1,14 @@
 class TasksController < ApplicationController
 
 	def create
-		if current_user.tasks.create!(task_params)
+		if current_user.tasks.create (task_params)
       		@task = current_user.tasks.first
-      	end
+    else
+      redirect_to root_url
+    end
       	if @task.save
       		redirect_to root_url
-    	end
+    	 end
 	end
 
   def edit
