@@ -76,7 +76,7 @@ margin-right: 140px;
 #er{
   width:300px;
   border: 1px solid #F08080;
-  margin-left:39%;
+  margin-left:40.5%;
 }
 .field_with_errors {
   @extend .control-group;
@@ -201,8 +201,13 @@ margin-right: 140px;
 }
 /*edit*/
 #re-title{
-  width:370px;
+  width:440px;
 
+}
+#re{
+  width:500px;
+  margin-left:48px;
+  margin-top:-20px;
 }
 .fa-check{
   margin-top:-7px;
@@ -313,4 +318,13 @@ width:15px;
 }
 #task:hover .mod_t{
   display:block;
+}
+.re_task{
+  height:30px;
+  margin-top:-40px;
+  margin-left:10%;
+  width:500px;
+}
+#re-t{
+  width:450px;
 }

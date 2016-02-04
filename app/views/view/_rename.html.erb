@@ -1,0 +1,6 @@
+<i class="fa fa-calendar" id="calendar"></i><div id="re"><% value=@project %>
+<%= form_tag("/view/update/#{value.id}",:remote=>true, method: :patch) do %>
+	<%= text_field_tag "title", value.title, id:"re-title" %>
+	<%= button_tag "", class: "fa fa-check" %>
+<%end%>
+</div>

@@ -1,0 +1,2 @@
+$("<%= escape_javascript(render('task', task: @task, value: @task.project)) %>").prependTo("#task_cr<%= escape_javascript(params[:task][:project_id]) %>")
+$("#task_name").val("");

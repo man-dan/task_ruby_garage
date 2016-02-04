@@ -1,0 +1,8 @@
+<i class="fa fa-calendar" id="calendar"></i><p ><%= value.title %></p>
+ <div class="mod"><div id="v-line">|</div>
+  <div class="ed"><%=link_to "view/edit/#{value.id}", :remote => true do%><i class="fa fa-pencil p_pencil"></i><%end%></div>
+       
+        <div id="trashs"><%=link_to "view/destroy/#{value.id}", :remote => true,  method: :delete do%>
+        <i class="fa fa-trash-o"></i>
+        <%end%></div>
+    </div>

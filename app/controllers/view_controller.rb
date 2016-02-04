@@ -13,29 +13,45 @@ class ViewController < ApplicationController
       @project=current_user.projects.first
       @tasks=current_user.tasks.all
       @task=current_user.tasks.new
-  	end
-	
-	if @project.save
-      redirect_to root_url
+      respond_to do |format|
+        format.js
     end
+  else
+      respond_to do |format|
+        format.js
+    end
+  end
 end
 def destroy
     if current_user.projects.find(params[:id]).destroy
-    	redirect_to root_url
+    	respond_to do |format|
+        format.js
+      end
     end
 end
 
 def edit
-   @project=current_user.projects.find(params[:id])
-
+   if @project=current_user.projects.find(params[:id])
+        respond_to do |format|
+          format.js
+      end
+    else
+        respond_to do |format|
+          format.js
+        end
+    end
 end
 
 def update
     @project=current_user.projects.find(params[:id])
     if @project.update_attributes(:title => params[:title])
-    	redirect_to root_url
+    	 respond_to do |format|
+          format.js
+      end
     else
-      render 'edit'
+      respond_to do |format|
+          format.js
+      end
     end
   end
 end

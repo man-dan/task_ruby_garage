@@ -1,9 +1,9 @@
-<% @projects.each do |f| %>
-		<%= render 'view/project', value: f%>
+<div id="projects"><% @projects.each do |f| %>
+		<%= render 'view/project', value: f, tasks: @tasks %>
 	
 	<% end %>
-
-<div><%= button_to "view/create", id:"add-list" do %>
+</div>
+<div><%= button_to "view/create", id:"add-list", :remote => true do %>
 
  	 <div class="fa fa-plus fa-2x" id="pluss"></div><b>Add TODO List</b>
 <% end %></div>

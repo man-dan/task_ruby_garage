@@ -1,0 +1,7 @@
+<div  class="re_task"><% value=@task %>
+<%= form_tag("/tasks/update/#{value.id}", :remote=>true, method: :patch) do %>
+	<%= text_field_tag "name", value.name, id:"re-t" %>
+	<%= button_tag "", class: "fa fa-check" %>
+<%end%></div>
+
+
