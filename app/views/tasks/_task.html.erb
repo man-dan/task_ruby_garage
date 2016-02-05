@@ -1,14 +1,14 @@
 <div id="deltask<%= task.id %>"><div id="task"><div id="check">
 <div id="check_t<%= task.id %>">
 <% if task.status == true %>
-    <%= render('tasks/tcheck', task: task) %>
+    <%= render('tasks/check', task: task) %>
 <% else %>
-     <%= render('tasks/tuncheck', task: task) %>
+     <%= render('tasks/uncheck', task: task) %>
 <% end %>
 </div>
 </div>
 <div id="task_line"></div><div id="tasks_line"></div><div id="retask<%= task.id %>"><% if task.status==true %><p class="t_name" id="ts_name<%= task.id %>" style="text-decoration:line-through
-" ><%= task.name%></p><% else %><p class="t_name" id="ts_name<%= task.id %>"><%= task.name%></p><% end %><div id="gr_line">
+" ><%= task.name%></p><% else %><p class="t_name" id="ts_name<%= task.id %>" ><%= task.name%></p><% end %><div id="gr_line">
 </div> 
 <div class="mod_t"><div id="pencil_t">
 	<%=link_to "tasks/edit/#{task.id}", :remote=>true do%>

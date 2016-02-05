@@ -1,2 +1,2 @@
-$("#check_t<%= escape_javascript(params[:id]) %>").html("<%= escape_javascript(render('tuncheck', task: @task)) %>")
-$("#ts_name<%= escape_javascript(params[:id]) %>").html("<%= escape_javascript(render('tuname', task: @task)) %>")
+$("#check_t<%= escape_javascript(params[:id]) %>").html("<%= escape_javascript(render("uncheck", task: @task)) %>")
+$("#ts_name<%= escape_javascript(params[:id]) %>").html("<%= escape_javascript(render("tname", task: @task)) %>")
