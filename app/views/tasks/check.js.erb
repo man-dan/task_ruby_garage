@@ -1,0 +1,2 @@
+$("#check_t<%= escape_javascript(params[:id]) %>").html("<%= escape_javascript(render('tcheck', task: @task)) %>")
+$("#ts_name<%= escape_javascript(params[:id]) %>").html("<%= escape_javascript(render('tname', task: @task)) %>")

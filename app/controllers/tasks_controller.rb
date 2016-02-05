@@ -45,13 +45,17 @@ class TasksController < ApplicationController
   def check
     @task=current_user.tasks.find(params[:id])
     @task.update_attributes(:status => true)
-    redirect_to root_url
+    respond_to do |format|
+      format.js
+    end
   end
 
   def uncheck
     @task=current_user.tasks.find(params[:id])
     @task.update_attributes(:status => false)
-    redirect_to root_url
+    respond_to do |format|
+      format.js
+    end
   end
 
 	private
