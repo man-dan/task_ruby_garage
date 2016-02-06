@@ -2,7 +2,7 @@ TaskRubyGarage::Application.routes.draw do
    resources :users
    resources :sessions, only: [:new, :create, :destroy]
    resources :view, only:[:index, :create, :destroy, :edit, :update]
-   resources :tasks, only: [:create, :destroy, :edit, :update]
+   resources :tasks, only: [:create, :destroy, :edit, :update,:check,:uncheck]
    root 'view#index' 
    match '/signup',            to: 'users#new',          via: 'get'
    match '/signin',            to: 'sessions#new',       via: 'get'

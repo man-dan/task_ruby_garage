@@ -50,6 +50,7 @@ def update
       end
     else
       respond_to do |format|
+          render 'edit'
           format.js
       end
     end

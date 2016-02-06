@@ -1,14 +1,13 @@
 class TasksController < ApplicationController
 
 	def create
-		if current_user.tasks.create (task_params)
+		if current_user.tasks.create! (task_params)
       		@task = current_user.tasks.first
           respond_to do |format|
             format.js
           end
     else
        respond_to do |format|
-        format.html { redirect_to root_url }
         format.js
        end
     end
@@ -29,6 +28,7 @@ class TasksController < ApplicationController
       end
     else
       respond_to do |format|
+          render 'edit'
           format.js
       end
     end
@@ -45,6 +45,7 @@ class TasksController < ApplicationController
     @task=current_user.tasks.find(params[:id])
     @task.update_attributes(:status => true)
     respond_to do |format|
+          format.html { redirect_to root_url }
           format.js
     end
   end
@@ -54,6 +55,7 @@ class TasksController < ApplicationController
     @task.update_attributes(:status => false)
     respond_to do |format|
           format.js
+          format.html { redirect_to root_url }
     end
   end
 
